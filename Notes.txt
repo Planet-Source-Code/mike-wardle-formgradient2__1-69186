@@ -1,0 +1,43 @@
+FormGradient2  *** It is a very small utility and suitable for beginners ***
+
+Simple  Form color gradient which includes standard controls like OptionButtons, Frames, etc. Single subroutine.
+No APIs, no ActiveX.
+Zip contains a small demo project.
+
+This is a slightly altered version of FormGradient version1 with more user notes and controls.
+
+Usage   	In  Form_Load  subroutines call  FormGradient Me, 174, 212, 255, 124, 152, 225
+         	Add the subroutine FormGradient to your form code module or better still to a general code module
+          	If you want to change the colors at runtime, then call FormGradient again with new parameters
+          	If you allow form resizing then call FormGradient in the  Form_Resize  subroutine
+
+Limitations
+	The gradient is only vertical.
+	Some controls do not have an optional transparent background and are set to the average color of the form, at their height.
+	This average color works when the the color gradient is small but shows up as patch with larger gradients.
+
+Resetting control BackColor
+	Some controls never have their BackColor changed, other always change.
+	The demo includes a simple way of setting the BackColor for a control.
+
+APIs, ActiveX
+	Because of increasing security levels being applied, this method avoids these as they can trigger concerns and warnings.
+	The source is clearly visible and understood.
+
+Optical illusions
+	The color of a control (with a single/solid Backcolor) will seem to be different, according to its surrounding Form color.
+	However, using a color dropper to pick up the control color shows the color is exactly as set by the program.
+	Examples of this illusion are :-
+	       The 'A Microsoft frame example'.
+	 	The apparent gradient reversal inside the frame is an optical illusion - the background is all one color!
+	       The 'A button' control for one of the four BackColors used, matches finish color at the bottom of the form.
+		When the form is maximised the button appears to be a different color! 
+
+A cheat for Frames
+	Frame controls can tall objects and so suffer from the gradient illusion above.
+	In the demo I simply used an Image control with no picture, to provide a 3D frame round the Option4 controls.
+	The same effect can be created with lines. Line 5 is drawn over Line2.  Line5 is narrower than Line2.
+
+
+Regards    Mike Wardle   17 August 2007
+	
